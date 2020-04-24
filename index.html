@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    html{
+        width: 100%;
+        height: 100%;
+    }
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            background: url(img/bg.jpg) no-repeat center/cover ;
+        }
+
+        .heart-body {
+            width: 500px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .snowfall-flakes:before,
+        .snowfall-flakes:after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: block;
+            width: 30px;
+            height: 46px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .snowfall-flakes:before {
+            -webkit-transform: rotate(-45deg);
+            /* Safari 和 Chrome */
+            -moz-transform: rotate(-45deg);
+            /* Firefox */
+            -ms-transform: rotate(-45deg);
+            /* IE 9 */
+            -o-transform: rotate(-45deg);
+            /* Opera */
+            transform: rotate(-45deg);
+        }
+
+        .snowfall-flakes:after {
+            left: 13px;
+            -webkit-transform: rotate(45deg);
+            /* Safari 和 Chrome */
+            -moz-transform: rotate(45deg);
+            /* Firefox */
+            -ms-transform: rotate(45deg);
+            /* IE 9 */
+            -o-transform: rotate(45deg);
+            /* Opera */
+            transform: rotate(45deg);
+        }
+           .snowfall-flakes:before,
+        .snowfall-flakes:after {
+            width: 10px;
+            height: 16px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .snowfall-flakes:after {
+            left: 4px;
+        }
+    </style>
+</head>
+
+<body>
+<audio autoplay="" loop=""><source src="vic/sh.mp3"></audio>
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/snowfall.jquery.js"></script>
+  <script>
+      //调用飘落函数 实现飘落效果
+      $(document).snowfall({
+          flakeCount: 50 //爱心的个数
+      });
+  </script>
+</body>
+
+</html>
